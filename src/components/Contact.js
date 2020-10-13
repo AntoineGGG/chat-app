@@ -5,14 +5,14 @@ import propTypes from 'prop-types';
 function Contact(props) {
   return (
     <div className='Contact'>
-      <img className='avatar' src={props.img} />
+      <img className='avatar' src={props.avatar} />
       <div>
         <p className='name'> {props.name}</p>
         <div className='status'>
           <div
-            className={props.status ? 'status-online' : 'status-offline'}
+            className={props.online ? 'status-online' : 'status-offline'}
           ></div>
-          <p className='status-text'>{props.statusText}</p>
+          <p className='status-text'>{props.online ? 'Online' : 'Offline'}</p>
         </div>
       </div>
     </div>
